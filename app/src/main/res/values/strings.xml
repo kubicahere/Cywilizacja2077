@@ -5,8 +5,11 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="fragment1">Fragment1</string>
-    <string name="Start">startText</string>
-    <string name="RegisterText">registerText</string>
-    <string name="loginText">loginText</string>
+    <string name="Start">Menu</string>
+    <string name="RegisterText">Rejestracja</string>
+    <string name="loginText">Logowanie</string>
     <string name="searchText">searchText</string>
+    <string name="loginRegister">Login</string>
+    <string name="registerConfirmPassword">Confirm Password</string>
+    <string name="registerPassword">Password</string>
 </resources>

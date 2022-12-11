@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fragment_login">#D62121</color>
-    <color name="fragment_register">#4C0853</color>
+    <color name="fragment_login">#FFFFFF</color>
+    <color name="fragment_register">#FFFFFF</color>
     <color name="fragment_start">#902BBC</color>
 </resources>

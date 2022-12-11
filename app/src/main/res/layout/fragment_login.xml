@@ -7,13 +7,37 @@
 
 
     <TextView
+        android:id="@+id/loginTopText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="@string/loginText"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
         android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/loginLogin"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginTopText"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/loginRegister"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:autofillHints="login"
+        />
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginLogin"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/registerPassword"
+        android:inputType="textPassword"
+        android:textSize="30sp"
+        android:autofillHints="login"
         />
 
 </RelativeLayout>

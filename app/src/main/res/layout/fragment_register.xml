@@ -2,18 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/fragment_register"
-    >
+    tools:context="RegisterFragmentClass">
 
 
     <TextView
+        android:id="@+id/registerTopText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="@string/RegisterText"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
         android:textColor="@color/black"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/registerLogin"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerTopText"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/loginRegister"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:autofillHints="login"
+        />
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerLogin"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/registerPassword"
+        android:inputType="textPassword"
+        android:textSize="30sp"
+        android:autofillHints="login"
+        />
+    <EditText
+        android:id="@+id/registerConfirmPassword"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerPassword"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/registerConfirmPassword"
+        android:inputType="textPassword"
+
+        android:textSize="30sp"
+        android:autofillHints="password"
         />
 
 </RelativeLayout>
