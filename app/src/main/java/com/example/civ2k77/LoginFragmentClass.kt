@@ -38,8 +38,8 @@ class LoginFragmentClass:Fragment(R.layout.fragment_login) {
     }
 
     fun clearInputs(){
-        binding.loginLogin.setText("")
-        binding.loginPassword.setText("")
+        binding.loginLogin.text = null
+        binding.loginPassword.text = null
     }
     fun checkData():Boolean{
         return true

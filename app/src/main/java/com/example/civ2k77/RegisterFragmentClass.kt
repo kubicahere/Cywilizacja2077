@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
 import com.example.civ2k77.databinding.FragmentRegisterBinding
 import android.text.Editable
-import org.w3c.dom.Text
 
 class RegisterFragmentClass() : Fragment(R.layout.fragment_register) {
     private lateinit var binding: FragmentRegisterBinding
@@ -15,6 +13,8 @@ class RegisterFragmentClass() : Fragment(R.layout.fragment_register) {
     var passwordTest: String = ""
     var confPasswordTest: String = ""
     var isActive:Boolean = false
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRegisterBinding.bind(view)
@@ -26,6 +26,12 @@ class RegisterFragmentClass() : Fragment(R.layout.fragment_register) {
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {
                 loginTest = s.toString();
+                //database = FirebaseDatabase.getInstance().getReference("Users")
+                //val testUser = User(loginTest, "1234", "1234")
+               // database.child(loginTest).setValue(testUser).addOnSuccessListener {
+                 //   clearInputs()
+
+               // }
             }
         })
         binding.registerPassword.addTextChangedListener(object:TextWatcher{
@@ -48,17 +54,19 @@ class RegisterFragmentClass() : Fragment(R.layout.fragment_register) {
                 confPasswordTest = s.toString();
             }
         })
+
     }
 
     fun clearInputs(){
-        binding.registerLogin.setText("")
-        binding.registerPassword.setText("")
-        binding.registerConfirmPassword.setText("")
+        binding.registerLogin.text = null
+        binding.registerPassword.text = null
+        binding.registerConfirmPassword.text = null
     }
 
     fun checkLogin(): Boolean{
         //if jest taki w bazie danych
         //ret false
+
         return true
     }
 
