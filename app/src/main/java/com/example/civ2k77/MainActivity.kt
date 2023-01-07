@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             else if(text == "Try Login"){
-                tryLogin(loginfc)
+                    if(tryLogin(loginfc))
+                        replaceFragment(text as String)
                 return@setOnClickListener
             }
             replaceFragment(text as String)
@@ -91,7 +92,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-    @SuppressLint("Range")
     private fun tryRegister(form: RegisterFragmentClass) : Boolean{
         if(form.loginTest.isEmpty() || form.passwordTest.isEmpty() || form.confPasswordTest.isEmpty())
         {
@@ -100,7 +100,6 @@ class MainActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Androidly Alert")
         val db = DBHelper(this, null)
-        //te buildery do wyjebania
         if(form.checkPasswords()){
             val cursor = db.checkIfLoginExists(form.loginTest)
             if(cursor?.count == 0) {

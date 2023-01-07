@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1013377270121",
+    "firebase_url": "https://civ2k77-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "civ2k77",
+    "storage_bucket": "civ2k77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013377270121:android:094feef347022b1f94fdf8",
+        "android_client_info": {
+          "package_name": "com.example.civ2k77"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013377270121-bf5cckqquprno3pu67a9f2tvvm9e0pr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGuYy-Ls3EJlxPeoyM4Gbyub1jSuarFvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013377270121-bf5cckqquprno3pu67a9f2tvvm9e0pr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
