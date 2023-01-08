@@ -1,6 +1,6 @@
 package com.example.civ2k77
 
-import android.annotation.SuppressLint
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     var registerfc = RegisterFragmentClass()
     var afterLoginfc = AfterLoginUserViewClass()
     var startfc = StartFragmentClass()
+    var gameplay = GameplayClass()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
         else if(text == "Try Login")
         {
-            fragmentTransaction.replace(R.id.fragmentContainer, afterLoginfc)
+            fragmentTransaction.replace(R.id.fragmentContainer, gameplay)
             loginfc.isActive = false
             binding.firstButton.visibility = View.INVISIBLE
             binding.secondButton.visibility = View.INVISIBLE

@@ -12,4 +12,5 @@
     <string name="loginRegister">Login</string>
     <string name="registerConfirmPassword">Confirm Password</string>
     <string name="registerPassword">Password</string>
+    <string name="Play">Play</string>
 </resources>
