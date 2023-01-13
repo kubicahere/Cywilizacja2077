@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             return false
         }
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Androidly Alert")
+        builder.setTitle("Rejestracja")
         val db = DBHelper(this, null)
         if(form.checkPasswords()){
             val cursor = db.checkIfLoginExists(form.loginTest)
@@ -136,7 +136,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun tryLogin(form: LoginFragmentClass) : Boolean{
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Androidly Alert")
+        builder.setTitle("Logowanie")
         val db = DBHelper(this, null)
         val cursor = db.getUser(form.loginLogin, form.loginPassword)
         if(cursor?.count == 0) {
