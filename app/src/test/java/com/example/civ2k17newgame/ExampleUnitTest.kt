@@ -1,4 +1,4 @@
-package com.example.civ2k77
+package com.example.civ2k17newgame
 
 import org.junit.Test
 

@@ -1,1 +1,0 @@
-# Cywilizacja2077

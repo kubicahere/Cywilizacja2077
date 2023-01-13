@@ -1,4 +1,4 @@
-package com.example.civ2k77
+package com.example.civ2k17newgame
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.civ2k77", appContext.packageName)
+        assertEquals("com.example.civ2k17newgame", appContext.packageName)
     }
 }

@@ -1,17 +1,3 @@
 <resources>
-    <string name="app_name">Civ2k77</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="fragment1">Fragment1</string>
-    <string name="Start">Menu</string>
-    <string name="RegisterText">Rejestracja</string>
-    <string name="loginText">Logowanie</string>
-    <string name="searchText">searchText</string>
-    <string name="loginRegister">Login</string>
-    <string name="registerConfirmPassword">Confirm Password</string>
-    <string name="registerPassword">Password</string>
-    <string name="Play">Play</string>
-    <string name="logo_description">Civilization 2077 logo</string>
+    <string name="app_name">Civ2k17NewGame</string>
 </resources>

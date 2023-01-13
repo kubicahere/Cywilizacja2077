@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Civ2k77"
+rootProject.name = "Civ2k17NewGame"
 include ':app'
