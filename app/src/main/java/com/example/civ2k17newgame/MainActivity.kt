@@ -1,9 +1,11 @@
 package com.example.civ2k17newgame
 
 import android.app.AlertDialog
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -13,12 +15,17 @@ class MainActivity : AppCompatActivity() {
     val g1 = Gracz("RED");
     val g2 = Gracz("BLUE");
     var whoseTurn = g1
-
+    var currentTurnTextColor: TextView? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getSupportActionBar()?.hide();
+        }
+
+        currentTurnTextColor = findViewById(R.id.textView2);
 
         //region Przypisanie danych
         val builder = AlertDialog.Builder(this)
@@ -76,8 +83,8 @@ class MainActivity : AppCompatActivity() {
             }
             //Turn(id.toInt(), whoseTurn)
         }
-        listOfButtons.elementAt(0).setBackgroundColor(Color.RED)
-        listOfButtons.elementAt(63).setBackgroundColor(Color.BLUE)
+        listOfButtons.elementAt(0).background.setTint(Color.RED)
+        listOfButtons.elementAt(63).background.setTint(Color.BLUE)
         Turn(0, g1)
         Turn(63, g2)
 
@@ -85,9 +92,16 @@ class MainActivity : AppCompatActivity() {
 
     fun Turn(id:Int, who:Gracz){
         if(who.nazwa == "RED"){
-            listOfButtons.elementAt(id).setBackgroundColor(Color.RED)
+            listOfButtons.elementAt(id).background.setTint(Color.RED);
+            currentTurnTextColor?.setTextColor(Color.BLUE);
+            currentTurnTextColor?.setText("Gracz 2");
         }
-        else listOfButtons.elementAt(id).setBackgroundColor(Color.BLUE)
+        else {
+            listOfButtons.elementAt(id).background.setTint(Color.BLUE);
+            currentTurnTextColor?.setTextColor(Color.RED);
+            currentTurnTextColor?.setText("Gracz 1");
+        }
+
         SetClickable(id, who)
         listOfCells.elementAt(id).isOccupied = true
         listOfCells.elementAt(id).whoTake = who
