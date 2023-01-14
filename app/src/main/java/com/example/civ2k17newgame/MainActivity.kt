@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toDrawable
 
 
 class MainActivity : AppCompatActivity() {
@@ -167,34 +168,42 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun SetClickable(id:Int, who:Gracz){
+        val tab = mutableListOf<Int>()
         if(id - 1 >= 0 && id%8 > 0){
-            listOfButtons.elementAt(id - 1).isEnabled = true
-            listOfCells.elementAt(id - 1).isClickable = true
-            listOfCells.elementAt(id - 1).whoCanTake.add(who)
-
-            //listOfCells.elementAt(id - 1).whatIsThat = PustePole()
+            tab.add(id - 1)
         }
         if(id + 1 <= 63 && (id+1)%8 != 0){
-            listOfButtons.elementAt(id + 1).isEnabled = true
-            listOfCells.elementAt(id + 1).isClickable = true
-            listOfCells.elementAt(id + 1).whoCanTake.add(who)
-
-            //listOfCells.elementAt(id - 1).whatIsThat = PustePole()
+            tab.add(id + 1)
         }
         if(id - 8 >= 0){
-            listOfButtons.elementAt(id - 8).isEnabled = true
-            listOfCells.elementAt(id - 8).isClickable = true
-            listOfCells.elementAt(id - 8).whoCanTake.add(who)
-
-            //listOfCells.elementAt(id - 1).whatIsThat = PustePole()
+            tab.add(id-8)
         }
         if(id + 8 <= 63){
-            listOfButtons.elementAt(id + 8).isEnabled = true
-            listOfCells.elementAt(id + 8).isClickable = true
-            listOfCells.elementAt(id + 8).whoCanTake.add(who)
-
-            //listOfCells.elementAt(id - 1).whatIsThat = PustePole()
+            tab.add(id + 8)
         }
+        for(el in tab) {
+            if(listOfCells.elementAt(el).whatIsThat is ZajetePole) {
+            }
+            else {
+                var flag = 0
+                if(listOfCells.elementAt(el).isClickable && !listOfCells.elementAt(el).whoCanTake.contains(who))
+                    flag = 1
+                listOfButtons.elementAt(el).isEnabled = true
+                listOfCells.elementAt(el).isClickable = true
+                listOfCells.elementAt(el).whoCanTake.add(who)
+
+                if(flag == 1){
+                    listOfButtons.elementAt(el).background.setTint(Color.WHITE)
+                }
+                else if (who.nazwa == "RED") {
+                    listOfButtons.elementAt(el).background.setTint(Color.CYAN)
+                }
+                else {
+                    listOfButtons.elementAt(el).background.setTint(Color.MAGENTA)
+                }
+            }
+        }
+
     }
 
 
