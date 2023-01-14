@@ -1,5 +1,6 @@
 package com.example.civ2k17newgame
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.res.Configuration
 import android.graphics.Color
@@ -15,8 +16,11 @@ class MainActivity : AppCompatActivity() {
     val g1 = Gracz("RED");
     val g2 = Gracz("BLUE");
     var whoseTurn = g1
+    var ktoraTura = 0;
+    //var ileDoKonca = 0;
     var currentTurnTextColor: TextView? = null;
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         for(i in 0..63){
             listOfCells.add(Pole(i))
         }
+        //ileDoKonca = listOfCells.size
 
         whoseTurn = g1
         listOfCells.elementAt(0).isClickable = false
@@ -52,6 +57,15 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
 
+//        findViewById<Button>(R.id.bInfo).setOnClickListener {
+//            val builderAlert = AlertDialog.Builder(this)
+//            builderAlert.setTitle("Androidly Alert")
+//            builderAlert.setMessage("${whoseTurn.nazwa} \n" +
+//                    "${whoseTurn.drewno} \n" +
+//                    "${whoseTurn.zelazo}")
+//            builderAlert.show()
+//        }
+
         listOfButtons.forEach(){
             val idS = it.resources.getResourceEntryName(it.id)
             val id = idS.substring(1)
@@ -61,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 val builderAlert = AlertDialog.Builder(this)
                 builderAlert.setTitle("Androidly Alert")
                 builderAlert.setMessage(listOfCells.elementAt(id.toInt()).whatIsThat.toString())
-
+                //builderAlert.show()
                 //jesli RED/BLUE nie moze zajac to return
                 if(!listOfCells.elementAt(id.toInt()).isClickable){
                     return@setOnClickListener
@@ -75,10 +89,18 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-                builderAlert.show()
+
                 if(listOfCells.elementAt(id.toInt()).whatIsThat is PustePole){
                     (listOfCells.elementAt(id.toInt()).whatIsThat
                             as PustePole).CzyZajac(this, id.toInt(), whoseTurn)
+                }
+                else if(listOfCells.elementAt(id.toInt()).whatIsThat is Las){
+                    (listOfCells.elementAt(id.toInt()).whatIsThat
+                            as Las).CzyZajacLas(this, id.toInt(), whoseTurn)
+                }
+                else if(listOfCells.elementAt(id.toInt()).whatIsThat is RudaZelaza){
+                    (listOfCells.elementAt(id.toInt()).whatIsThat
+                            as RudaZelaza).CzyZajacRude(this, id.toInt(), whoseTurn)
                 }
             }
             //Turn(id.toInt(), whoseTurn)
@@ -109,14 +131,37 @@ class MainActivity : AppCompatActivity() {
             listOfCells.elementAt(id).whatIsThat = ZajetePole()
         }
         else if(listOfCells.elementAt(id).whatIsThat is Las){
-
+            listOfCells.elementAt(id).whatIsThat = ChataDrwala()
+            listOfButtons.elementAt(id).background.setTint(Color.GREEN)
         }
         else if(listOfCells.elementAt(id).whatIsThat is RudaZelaza){
-
+            listOfCells.elementAt(id).whatIsThat = KopalniaZelaza()
+            listOfButtons.elementAt(id).background.setTint(Color.GRAY)
         }
-
         who.listaPol.add(listOfCells.elementAt(id))
 
+        ktoraTura++
+        if(ktoraTura == 2){
+            g1.listaPol.forEach(){
+                if(it.whatIsThat is ChataDrwala){
+                    (it.whatIsThat as ChataDrwala).PrzydzielDrewno(g1)
+                }
+                else if(it.whatIsThat is KopalniaZelaza){
+                    (it.whatIsThat as KopalniaZelaza).PrzydzielZelazo(g1)
+                }
+            }
+            g2.listaPol.forEach(){
+                if(it.whatIsThat is ChataDrwala){
+                    (it.whatIsThat as ChataDrwala).PrzydzielDrewno(g2)
+                }
+                else if(it.whatIsThat is KopalniaZelaza){
+                    (it.whatIsThat as KopalniaZelaza).PrzydzielZelazo(g2)
+                }
+            }
+            ktoraTura = 0
+        }
+
+        //ileDoKonca--
         if(who.nazwa == "RED") whoseTurn = g2
         else whoseTurn = g1
     }
