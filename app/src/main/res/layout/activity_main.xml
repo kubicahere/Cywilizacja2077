@@ -4,398 +4,727 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linlayout1"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088"
         tools:ignore="MissingConstraints">
+
         <Button
             android:id="@+id/b0"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b1"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b2"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b3"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b4"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b5"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b6"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b7"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout2"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linlayout1">
+
         <Button
             android:id="@+id/b8"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b9"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b10"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b11"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b12"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b13"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b14"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b15"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout3"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linlayout2">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout2"
+        app:layout_constraintVertical_bias="0.0">
+
         <Button
             android:id="@+id/b16"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b17"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b18"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b19"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b20"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b21"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b22"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b23"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout4"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linlayout3">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout3"
+        app:layout_constraintVertical_bias="0.0">
+
         <Button
             android:id="@+id/b24"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b25"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b26"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b27"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b28"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b29"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b30"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b31"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout5"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linlayout4">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout4"
+        app:layout_constraintVertical_bias="0.0">
+
         <Button
             android:id="@+id/b32"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b33"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b34"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b35"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b36"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b37"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b38"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b39"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout6"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linlayout5">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout5"
+        app:layout_constraintVertical_bias="0.0">
+
         <Button
             android:id="@+id/b40"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b41"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b42"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b43"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b44"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b45"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b46"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b47"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout7"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linlayout6">
+
         <Button
             android:id="@+id/b48"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b49"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b50"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b51"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b52"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b53"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b54"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b55"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linlayout8"
-        android:layout_height="40dp"
         android:layout_width="match_parent"
-        android:layout_marginStart="30dp"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/linlayout7">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout7"
+        app:layout_constraintVertical_bias="0.0">
+
         <Button
             android:id="@+id/b56"
-            android:layout_marginStart="5dp"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b57"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b58"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b59"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b60"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b61"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b62"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+
         <Button
             android:id="@+id/b63"
             android:layout_width="40dp"
-            android:layout_height="40dp">
-        </Button>
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/pole"
+            android:backgroundTint="@drawable/button_color"
+            app:backgroundTint="@null"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="158dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linlayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tura:"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Czerwony"
+            android:textColor="@color/red" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

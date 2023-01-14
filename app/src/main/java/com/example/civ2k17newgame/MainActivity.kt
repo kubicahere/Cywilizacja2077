@@ -1,25 +1,28 @@
 package com.example.civ2k17newgame
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.res.Configuration
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.view.View
 import android.widget.Button
-import android.widget.LinearLayout
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.reflect.typeOf
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     var listOfButtons = mutableListOf<Button>()
     var listOfCells = mutableListOf<Pole>()
     var whoseTurn = "RED"
+    var currentTurnTextColor: TextView? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getSupportActionBar()?.hide();
+        }
+
+        currentTurnTextColor = findViewById(R.id.textView2);
 
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Androidly Alert")
@@ -58,8 +61,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        listOfButtons.elementAt(0).setBackgroundColor(Color.RED)
-        listOfButtons.elementAt(63).setBackgroundColor(Color.BLUE)
+        listOfButtons.elementAt(0).background.setTint(Color.RED)
+        listOfButtons.elementAt(63).background.setTint(Color.BLUE)
         //CheckClickable(0)
         //CheckClickable(63)
         Turn(0, "RED")
@@ -72,14 +75,20 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        if(who == "RED"){
-            listOfButtons.elementAt(id).setBackgroundColor(Color.RED)
+        if (who == "RED") {
+            currentTurnTextColor?.setTextColor(Color.BLUE);
+            currentTurnTextColor?.setText("Gracz 2");
+        } else {
+            currentTurnTextColor?.setTextColor(Color.RED);
+            currentTurnTextColor?.setText("Gracz 1");
         }
-        else listOfButtons.elementAt(id).setBackgroundColor(Color.BLUE)
+
+        if(who == "RED"){
+            listOfButtons.elementAt(id).background.setTint(Color.RED)
+        }
+        else listOfButtons.elementAt(id).background.setTint(Color.BLUE)
         SetClickable(id, who)
         listOfCells.elementAt(id).isOccupied = true
-
-
 
         if(who == "RED") whoseTurn = "BLUE"
         else whoseTurn = "RED"
