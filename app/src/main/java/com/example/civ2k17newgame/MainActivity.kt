@@ -196,10 +196,10 @@ class MainActivity : AppCompatActivity() {
                     listOfButtons.elementAt(el).background.setTint(Color.WHITE)
                 }
                 else if (who.nazwa == "RED") {
-                    listOfButtons.elementAt(el).background.setTint(Color.CYAN)
+                    listOfButtons.elementAt(el).background.setTint(Color.parseColor("#f5b5b5"))
                 }
                 else {
-                    listOfButtons.elementAt(el).background.setTint(Color.MAGENTA)
+                    listOfButtons.elementAt(el).background.setTint(Color.parseColor("#a5cdfa"))
                 }
             }
         }
