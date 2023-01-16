@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity() {
             }
             else {
                 var flag = 0
-                if(listOfCells.elementAt(el).isClickable && !listOfCells.elementAt(el).whoCanTake.contains(who))
+                if(listOfCells.elementAt(el).isClickable && !listOfCells.elementAt(el).whoCanTake.contains(who) && listOfCells.elementAt(el).whatIsThat !is ZajetePole && listOfCells.elementAt(el).whatIsThat !is KopalniaZelaza && listOfCells.elementAt(el).whatIsThat !is RudaZelaza && listOfCells.elementAt(el).whatIsThat !is Las && listOfCells.elementAt(el).whatIsThat !is ChataDrwala)
                     flag = 1
                 listOfButtons.elementAt(el).isEnabled = true
                 listOfCells.elementAt(el).isClickable = true
@@ -195,10 +195,10 @@ class MainActivity : AppCompatActivity() {
                 if(flag == 1){
                     listOfButtons.elementAt(el).background.setTint(Color.WHITE)
                 }
-                else if (who.nazwa == "RED") {
+                else if (who.nazwa == "RED" && listOfCells.elementAt(el).whatIsThat !is ZajetePole && listOfCells.elementAt(el).whatIsThat !is KopalniaZelaza && listOfCells.elementAt(el).whatIsThat !is RudaZelaza && listOfCells.elementAt(el).whatIsThat !is Las && listOfCells.elementAt(el).whatIsThat !is ChataDrwala) {
                     listOfButtons.elementAt(el).background.setTint(Color.CYAN)
                 }
-                else {
+                else if (who.nazwa == "BLUE" && listOfCells.elementAt(el).whatIsThat !is ZajetePole && listOfCells.elementAt(el).whatIsThat !is KopalniaZelaza && listOfCells.elementAt(el).whatIsThat !is RudaZelaza && listOfCells.elementAt(el).whatIsThat !is Las && listOfCells.elementAt(el).whatIsThat !is ChataDrwala){
                     listOfButtons.elementAt(el).background.setTint(Color.MAGENTA)
                 }
             }
