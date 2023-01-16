@@ -196,10 +196,10 @@ class MainActivity : AppCompatActivity() {
                     listOfButtons.elementAt(el).background.setTint(Color.WHITE)
                 }
                 else if (who.nazwa == "RED" && listOfCells.elementAt(el).whatIsThat !is ZajetePole && listOfCells.elementAt(el).whatIsThat !is KopalniaZelaza && listOfCells.elementAt(el).whatIsThat !is RudaZelaza && listOfCells.elementAt(el).whatIsThat !is Las && listOfCells.elementAt(el).whatIsThat !is ChataDrwala) {
-                    listOfButtons.elementAt(el).background.setTint(Color.CYAN)
+                    listOfButtons.elementAt(el).background.setTint(Color.parseColor("#f5b5b5"))
                 }
                 else if (who.nazwa == "BLUE" && listOfCells.elementAt(el).whatIsThat !is ZajetePole && listOfCells.elementAt(el).whatIsThat !is KopalniaZelaza && listOfCells.elementAt(el).whatIsThat !is RudaZelaza && listOfCells.elementAt(el).whatIsThat !is Las && listOfCells.elementAt(el).whatIsThat !is ChataDrwala){
-                    listOfButtons.elementAt(el).background.setTint(Color.MAGENTA)
+                    listOfButtons.elementAt(el).background.setTint(Color.parseColor("#a5cdfa"))
                 }
             }
         }
